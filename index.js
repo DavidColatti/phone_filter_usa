@@ -4,20 +4,29 @@ const data = require("./data.json");
 
 const main = async () => {
   const newData = data.map((lead) => {
-    const { final_phone_number } = lead;
-    const info = phone(final_phone_number);
+    const { phone_number } = lead;
+    const info = phone(phone_number);
+    let cleanedNum;
+
+    if (info[0]) {
+      cleanedNum = info[0].replace(/^\+1/g, "");
+    }
 
     return {
       ...lead,
-      cleanedPhoneFormat: info[0],
-      countryCode: info[1],
+      cleanedPhoneFormat: cleanedNum,
     };
   });
 
-  const filteredData = newData.filter(
-    (lead) => lead.countryCode === "USA" || lead.countryCode === undefined
-  );
+  const filteredData = newData.filter((lead) => {
+    if (!!lead.cleanedPhoneFormat === false) {
+      return false;
+    } else {
+      return lead.countryCode === "USA" || lead.countryCode === undefined;
+    }
+  });
 
+  console.log(`Found ${filteredData.length} out of ${data.length}`);
   const csv = new ObjectsToCsv(filteredData);
   await csv.toDisk("./data.csv");
 };
