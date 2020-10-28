@@ -2,12 +2,114 @@
 # yarn lockfile v1
 
 
+adler-32@:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/adler-32/-/adler-32-1.2.0.tgz#6a3e6bf0a63900ba15652808cb15c6813d1a5f25"
+  integrity sha1-aj5r8KY5ALoVZSgIyxXGgT0aXyU=
+  dependencies:
+    exit-on-epipe "~1.0.1"
+    printj "~1.1.0"
+
+cfb@~0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/cfb/-/cfb-0.11.1.tgz#a96db8f272a6c3fb99dbbb23ef41223f48be1ea7"
+  integrity sha1-qW248nKmw/uZ27sj70EiP0i+Hqc=
+  dependencies:
+    commander ""
+
+codepage@:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/codepage/-/codepage-1.14.0.tgz#8cbe25481323559d7d307571b0fff91e7a1d2f99"
+  integrity sha1-jL4lSBMjVZ19MHVxsP/5HnodL5k=
+  dependencies:
+    commander "~2.14.1"
+    exit-on-epipe "~1.0.1"
+
+colors@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-0.6.2.tgz#2423fe6678ac0c5dae8852e5d0e5be08c997abcc"
+  integrity sha1-JCP+ZnisDF2uiFLl0OW+CMmXq8w=
+
+commander@:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.0.tgz#b990bfb8ac030aedc6d11bc04d1488ffef56db75"
+  integrity sha512-zP4jEKbe8SHzKJYQmq8Y9gYjtO/POJLgIdKgV7B9qNmABVFVc+ctqSX6iXh4mCpJfRBOabiZ2YKPg8ciDw6C+Q==
+
+commander@~2.14.1:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+  integrity sha512-+YR16o3rK53SmWHU3rEM3tPAh2rwb1yPcQX5irVn7mb0gXbwuCCrnkbV5+PBfETdfg1vui07nM6PCG1zndcjQw==
+
 convert-array-to-csv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/convert-array-to-csv/-/convert-array-to-csv-2.0.0.tgz#3a7f4548a169a3efc5857d0da28c5cfb57a93173"
   integrity sha512-dxUINCt28k6WbXGMoB+AaKjGY0Y6GkKwZmT+kvD4nJgVCOKsnIQ3G6n0v2II1lG4NwXQk6EWZ+pPDub9wcqqMg==
 
+crc-32@:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/crc-32/-/crc-32-1.2.0.tgz#cb2db6e29b88508e32d9dd0ec1693e7b41a18208"
+  integrity sha512-1uBwHxF+Y/4yF5G48fwnKq6QsIXheor3ZLPT80yGBV1oEUwpPojlEhQbWKVw1VwcTQyMGHK1/XMmTjmlsmTTGA==
+  dependencies:
+    exit-on-epipe "~1.0.1"
+    printj "~1.1.0"
+
+csv-excel-to-json@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/csv-excel-to-json/-/csv-excel-to-json-1.0.1.tgz#1ded08053ec63c7848c2f00fe401b63c41d5ddcc"
+  integrity sha1-He0IBT7GPHhIwvAP5AG2PEHV3cw=
+  dependencies:
+    node-xlsx "^0.7.4"
+
+exit-on-epipe@, exit-on-epipe@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/exit-on-epipe/-/exit-on-epipe-1.0.1.tgz#0bdd92e87d5285d267daa8171d0eb06159689692"
+  integrity sha512-h2z5mrROTxce56S+pnvAV890uu7ls7f1kEvVGJbw1OlFH3/mlJ5bkXu0KRyW94v37zzHPiUd55iLn3DA7TjWpw==
+
+frac@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/frac/-/frac-0.3.1.tgz#577677b7fdcbe6faf7c461f1801d34137cda4354"
+  integrity sha1-V3Z3t/3L5vr3xGHxgB00E3zaQ1Q=
+
+node-xlsx@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/node-xlsx/-/node-xlsx-0.7.4.tgz#1c3318e43b6c7ca4d01badb9f88f277a31e8a805"
+  integrity sha1-HDMY5DtsfKTQG625+I8nejHoqAU=
+  dependencies:
+    xlsx "^0.8.0"
+
 phone@^2.4.16:
   version "2.4.16"
   resolved "https://registry.yarnpkg.com/phone/-/phone-2.4.16.tgz#f7cdcd5b7ba2dac8c78af15f03fa011e60225882"
   integrity sha512-SLbFBMFuDiTDwAzw8/LjQ/kat+fP2cmKCxZ+cyKgAUUML5qz7PIv8w8DTFjlP/uWQ6uUFhcpYBSRyYSFsYISjQ==
+
+printj@~1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/printj/-/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
+  integrity sha512-zA2SmoLaxZyArQTOPj5LXecR+RagfPSU5Kw1qP+jkWeNlrq+eJZyY2oS68SU1Z/7/myXM4lo9716laOFAVStCQ==
+
+ssf@~0.8.1:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/ssf/-/ssf-0.8.2.tgz#b9d4dc6a1c1bcf76f8abfa96d7d7656fb2abecd6"
+  integrity sha1-udTcahwbz3b4q/qW19dlb7Kr7NY=
+  dependencies:
+    colors "0.6.2"
+    frac "0.3.1"
+    voc ""
+
+voc@:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/voc/-/voc-1.2.0.tgz#c459024531d71067c09e2c0c2bda6c2b13af32d8"
+  integrity sha512-BOuDjFFYvJdZO6e/N65AlaDItXo2TgyLjeyRYcqgAPkXpp5yTJcvkL2n+syO1r9Qc5g96tfBD2tuiMhYDmaGcA==
+
+xlsx@^0.8.0:
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/xlsx/-/xlsx-0.8.8.tgz#b92d76e0b5e4f060c9208d4b744756510443853a"
+  integrity sha1-uS124LXk8GDJII1LdEdWUQRDhTo=
+  dependencies:
+    adler-32 ""
+    cfb "~0.11.0"
+    codepage ""
+    commander ""
+    crc-32 ""
+    exit-on-epipe ""
+    ssf "~0.8.1"

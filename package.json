@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "convert-array-to-csv": "^2.0.0",
+    "csv-excel-to-json": "^1.0.1",
     "phone": "^2.4.16"
   }
 }

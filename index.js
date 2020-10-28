@@ -1,40 +1,61 @@
 const fs = require("fs");
 const phone = require("phone");
+const csvOrExcel = require("csv-excel-to-json");
 const { convertArrayToCSV } = require("convert-array-to-csv");
-const data = require("./data.json");
+
+const writeJson = async () => {
+  try {
+    csvOrExcel.convertToJson("./input.csv", "./data.json");
+
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
 
 const main = async () => {
-  const newData = data.map((lead) => {
-    const { phone_number } = lead;
-    const info = phone(phone_number);
-    let cleanedNum;
+  try {
+    let data;
+    await writeJson();
 
-    if (info[0]) {
-      cleanedNum = info[0].replace(/^\+1/g, "");
-    }
+    await setTimeout(async () => {
+      data = require("./data.json");
 
-    return {
-      ...lead,
-      phone_number: cleanedNum,
-      countryCode: info[1],
-    };
-  });
+      const newData = data.map((lead) => {
+        const { phone_number } = lead;
+        const info = phone(phone_number);
+        let cleanedNum;
 
-  const filteredData = newData.filter((lead) => {
-    if (!!lead.phone_number === false) {
-      return false;
-    } else {
-      return lead.countryCode === "USA" || lead.countryCode === undefined;
-    }
-  });
+        if (info[0]) {
+          cleanedNum = info[0].replace(/^\+1/g, "");
+        }
 
-  console.log(`Found ${filteredData.length} out of ${data.length}`);
+        return {
+          ...lead,
+          phone_number: cleanedNum,
+          countryCode: info[1],
+        };
+      });
 
-  const csv = await convertArrayToCSV(filteredData);
+      const filteredData = newData.filter((lead) => {
+        if (!!lead.phone_number === false) {
+          return false;
+        } else {
+          return lead.countryCode === "USA" || lead.countryCode === undefined;
+        }
+      });
 
-  fs.writeFile("./data.csv", csv, (err) => {
-    console.log(err || "Done");
-  });
+      console.log(`Found ${filteredData.length} out of ${data.length}`);
+
+      const csv = await convertArrayToCSV(filteredData);
+
+      fs.writeFile("./output.csv", csv, (err) => {
+        console.log(err || "Done");
+      });
+    }, 500);
+  } catch (e) {
+    console.log("Failed");
+  }
 };
 
 main();
