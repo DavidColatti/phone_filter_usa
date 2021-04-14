@@ -17,6 +17,11 @@ cfb@~0.11.0:
   dependencies:
     commander ""
 
+city-zip-by-phone@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/city-zip-by-phone/-/city-zip-by-phone-0.1.4.tgz#234c69ad5059f2f5099bb35337832a0982ff55e1"
+  integrity sha512-XsPnwHYUMg7EgDYF9ytEQGJhtZlrvxwVSc3l43OP8obvLbuyVxyFyBMuzujHq46QCClsb4EYiRI3jRejra+TbA==
+
 codepage@:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/codepage/-/codepage-1.14.0.tgz#8cbe25481323559d7d307571b0fff91e7a1d2f99"
@@ -113,3 +118,8 @@ xlsx@^0.8.0:
     crc-32 ""
     exit-on-epipe ""
     ssf "~0.8.1"
+
+zipcodes@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/zipcodes/-/zipcodes-8.0.0.tgz#4d124cdeedfc693f1b0ef8060323f206aeb98a9b"
+  integrity sha512-V8NolFaJhsPamGeCv5lJdk60Q7JBiXI6e+8JDksPC1NJWZ0t7g1OFfqVLZb2Nc2F5jmf9JTdYdWJBnIhGBvtbA==

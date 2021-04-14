@@ -4,8 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "city-zip-by-phone": "^0.1.4",
     "convert-array-to-csv": "^2.0.0",
     "csv-excel-to-json": "^1.0.1",
-    "phone": "^2.4.16"
+    "phone": "^2.4.16",
+    "zipcodes": "^8.0.0"
   }
 }
