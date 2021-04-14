@@ -36,16 +36,20 @@ const main = async () => {
 
         const zip_code = location.zip;
 
+        let state = "";
         if (zip_code) {
           const zip_code_data = zipcodes.lookup(zip_code);
-          location.state = zip_code_data.state;
+
+          if (zip_code_data) {
+            state = zip_code_data.state;
+          }
         }
 
         let output = {
           ...lead,
           phone_number: cleanedNum,
           city: location.city,
-          state: location.state,
+          state: state,
           zip: zip_code,
           countryCode: info[1] || "",
         };
